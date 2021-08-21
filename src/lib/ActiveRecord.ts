@@ -32,7 +32,7 @@ class ActiveRecord<TModel> {
   }
 
   protected find = async (
-    filter: mongoose.FilterQuery<TModel>,
+    filter: mongoose.FilterQuery<TModel> = {},
     options?: IQueryOptionsToBeUpdated,
   ): Promise<TModel[]> => {
     const { limit, select, skip, sort }: IQueryOptions = this.getValidQueryOptions(options)

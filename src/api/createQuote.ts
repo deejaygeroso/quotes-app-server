@@ -9,7 +9,7 @@ const createQuote = async (req: Request, res: Response): Promise<void> => {
     const savedQuote = await quoteModel.createIfNotExist({ author, quote })
 
     res.header('Content-Type', 'application/json')
-    res.send(JSON.stringify(savedQuote, null, 4))
+    res.send(savedQuote)
   } else {
     res.send({ error: 'invalid payload' })
   }
