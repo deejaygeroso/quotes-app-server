@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  server:
+    build:
+      context: .
+      dockerfile: ./config/docker/Dockerfile.${ENV}
+    container_name: server
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+    ports:
+      - '${PORT}:${PORT}'
+    restart: on-failure
+    volumes:
+      - /app-server/node_modules
+      - .:/app-server
+  mongo:
+    container_name: server-mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+    restart: on-failure
+    # volumes:
+    #   - /home/deejay/mongodb/database:/data/db
