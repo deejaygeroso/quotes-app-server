@@ -1,3 +1,4 @@
+export { default as IDeleteReturnData } from './IDeleteReturnData'
 export { default as IQuote } from './IQuote'
 export { default as IQuoteCreateInput } from './IQuoteCreateInput'
 

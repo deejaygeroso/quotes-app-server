@@ -1,7 +1,7 @@
 import { ActiveRecord } from '../../lib'
 import { Quote as QuoteSchema } from '../schemas'
 import mongoose from '../config/mongoose'
-import { IQuote, IQuoteCreateInput } from '../../interfaces'
+import { IDeleteReturnData, IQuote, IQuoteCreateInput } from '../../interfaces'
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const Quote = mongoose.model<IQuote>('Quote', QuoteSchema)
@@ -25,6 +25,10 @@ class QuoteModel extends ActiveRecord<IQuote> {
 
   public updateQuoteById = async (_id: string, author: string, quote: string): Promise<IQuote> => {
     return this.updateById(_id, { author, quote })
+  }
+
+  public deleteQuoteById = async (_id: string): Promise<IDeleteReturnData> => {
+    return this.model.deleteOne({ _id })
   }
 
   private findIfExist = async (quoteInputData: IQuoteCreateInput): Promise<IQuote> => {
