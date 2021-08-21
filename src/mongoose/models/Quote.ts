@@ -11,6 +11,12 @@ class QuoteModel extends ActiveRecord<IQuote> {
     super(Quote)
   }
 
+  public searchQuoteByAuthor = async (author: string): Promise<IQuote[]> => {
+    return this.find({
+      author: { $regex: author, $options: 'i' },
+    })
+  }
+
   public createIfNotExist = async (quoteInputData: IQuoteCreateInput): Promise<IQuote> => {
     const quote: IQuote = await this.findIfExist(quoteInputData)
     if (quote === null) {
