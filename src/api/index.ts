@@ -1,8 +1,8 @@
 import express from 'express'
-import home from './home'
+import createQuote from './createQuote'
 
 const router = express.Router()
 
-router.get('/', home)
+router.post('/createQuote', createQuote)
 
 export default router

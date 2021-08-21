@@ -1,4 +1,5 @@
 export { default as IQuote } from './IQuote'
+export { default as IQuoteCreateInput } from './IQuoteCreateInput'
 
 // lib
 export { default as IActiveRecordMatchValues } from './lib/IActiveRecordMatchValues'
