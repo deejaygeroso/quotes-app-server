@@ -1,20 +1,21 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config()
 
-import express, { Request, Response } from 'express'
+import * as express from 'express'
+import * as cors from 'cors'
 import apiRoute from './api'
-import cors from 'cors'
-import { processENV } from './constants'
 
-const app = express()
+const createServer = (): express.Express => {
+  const app = express()
 
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+  app.use(cors())
+  app.use(express.json())
+  app.use(express.urlencoded({ extended: true }))
 
-app.use('/api', apiRoute)
-app.get('/', (req: Request, res: Response) => res.send('Express + TypeScript Server'))
+  app.use('/api', apiRoute)
+  app.get('/', (req: express.Request, res: express.Response) => res.send('Express + TypeScript Server'))
 
-app.listen(processENV.port, (): void => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${processENV.port}`)
-})
+  return app
+}
+
+export default createServer

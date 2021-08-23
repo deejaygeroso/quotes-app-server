@@ -9,7 +9,7 @@ import {
   ISingleDocModelOptions,
   ISingleDocModelOptionsInput,
 } from '../interfaces'
-import mongoose from '../mongoose/config/mongoose'
+import mongoose from 'mongoose'
 
 /* ----------------------------------------------------------------------------------
  * ActiveRecord class version 1.1.0
