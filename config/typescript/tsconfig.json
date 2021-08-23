@@ -3,15 +3,15 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "../../src",
-    "esModuleInterop": true,
+    "baseUrl": "<rootDir>/src",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "../../dist",
+    "rootDir": "../../src",
     "sourceMap": true,
     "target": "es6"
   },
-  "include": ["../../src/**/*.ts"],
-  "exclude": ["../../node_modules"]
+  "include": ["<rootDir>/src/**/*.ts"],
+  "exclude": ["<rootDir>/node_modules"]
 }
