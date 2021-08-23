@@ -6,7 +6,7 @@ const getAuthorInfo = async (req: Request, res: Response): Promise<void> => {
   const info = await getAuthorsInformation(author)
 
   res.header('Content-Type', 'application/json')
-  res.send({ info })
+  res.send({ author, info })
 }
 
 export default getAuthorInfo
