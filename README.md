@@ -16,7 +16,7 @@ since these are what I'm using to run the application.
 #### Step 1. Clone the application
 
 ```
-git clone https://github.com/deejaygeroso/apollo-express-boilerplate.git
+git@github.com:deejaygeroso/quotes-app-server.git
 ```
 
 #### Step 2 (Optional). Install MongoDB using Docker
