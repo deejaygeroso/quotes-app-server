@@ -4,11 +4,11 @@
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "../../src",
-    "esModuleInterop": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "../../dist",
+    "rootDir": "../../src",
     "sourceMap": true,
     "target": "es6"
   },

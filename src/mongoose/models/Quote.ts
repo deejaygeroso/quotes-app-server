@@ -1,6 +1,6 @@
 import { ActiveRecord } from '../../lib'
 import { Quote as QuoteSchema } from '../schemas'
-import mongoose from '../config/mongoose'
+import * as mongoose from 'mongoose'
 import { IDeleteReturnData, IQuote, IQuoteCreateInput } from '../../interfaces'
 
 // eslint-disable-next-line @typescript-eslint/naming-convention

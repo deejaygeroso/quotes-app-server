@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { IQuote } from '../../interfaces'
-import mongoose from '../config/mongoose'
+import * as mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
