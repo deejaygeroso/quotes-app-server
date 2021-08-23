@@ -77,3 +77,29 @@ docker-compose up --build -d
 ```
 
 ---
+
+## API Routes  
+
+- `https://localhost:3000/api/createQuote`  
+  Request:  
+  ```
+  {
+    body: {
+       author: string
+       quote: string
+    },
+    method: POST
+  }
+  ```
+  Response:  
+  ```
+  {
+      _id: string
+      author: string
+      quote: string
+      createdAt: string
+      updatedAt: string
+  }
+  ```
+
+---
