@@ -12,9 +12,12 @@ class QuoteModel extends ActiveRecord<IQuote> {
   }
 
   public searchQuoteByAuthor = async (author: string): Promise<IQuote[]> => {
-    return this.find({
-      author: { $regex: author, $options: 'i' },
-    })
+    return this.find(
+      {
+        author: { $regex: author, $options: 'i' },
+      },
+      { sort: { createdAt: -1 } },
+    )
   }
 
   public createIfNotExist = async (quoteInputData: IQuoteCreateInput): Promise<IQuote> => {
@@ -26,7 +29,7 @@ class QuoteModel extends ActiveRecord<IQuote> {
   }
 
   public findAll = async (): Promise<IQuote[]> => {
-    return this.find()
+    return this.find({}, { sort: { createdAt: -1 } })
   }
 
   public updateQuoteById = async (_id: string, author: string, quote: string): Promise<IQuote> => {
