@@ -160,7 +160,6 @@ docker-compose up --build -d
     deletedCount?: number
   }
   ```
----
 
 - `https://localhost:3000/api/searchQuoteByAuthor`  
   Request:  
@@ -182,7 +181,6 @@ docker-compose up --build -d
     }
   ]
   ```
----
 
 - `https://localhost:3000/api/getAuthorInfo`  
   Request:  
@@ -199,6 +197,6 @@ docker-compose up --build -d
     info: string
   }
   ```
----
+
 
 
