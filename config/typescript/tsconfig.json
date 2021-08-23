@@ -3,7 +3,7 @@
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "<rootDir>/src",
+    "baseUrl": "../../src",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
@@ -12,6 +12,6 @@
     "sourceMap": true,
     "target": "es6"
   },
-  "include": ["<rootDir>/src/**/*.ts"],
-  "exclude": ["<rootDir>/node_modules"]
+  "include": ["../../src/**/*.ts"],
+  "exclude": ["../../node_modules"]
 }
