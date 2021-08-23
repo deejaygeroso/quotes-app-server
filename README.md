@@ -165,7 +165,9 @@ docker-compose up --build -d
   Request:  
   ```
   {
-    author: string
+    body: {
+      author: string
+    }
     method: POST
   }
   ```
@@ -186,7 +188,9 @@ docker-compose up --build -d
   Request:  
   ```
   {
-    author: string
+    body: {
+      author: string
+    }
     method: POST
   }
   ```
