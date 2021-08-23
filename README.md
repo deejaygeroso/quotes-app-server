@@ -161,12 +161,12 @@ docker-compose up --build -d
   }
   ```
 
-- `https://localhost:3000/api/searchQuoteByAuthor`  
+- `https://localhost:3000/api/searchQuote`  
   Request:  
   ```
   {
     body: {
-      author: string
+      searchInput: string
     }
     method: POST
   }
