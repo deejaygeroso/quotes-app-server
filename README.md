@@ -102,4 +102,24 @@ docker-compose up --build -d
   }
   ```
 
+- `https://localhost:3000/api/getAllQuotes`  
+  Request:  
+  ```
+  {
+    method: GET
+  }
+  ```
+  Response:  
+  ```
+  [
+    {
+        _id: string
+        author: string
+        quote: string
+        createdAt: string
+        updatedAt: string
+    }
+  ]
+  ```
+
 ---
