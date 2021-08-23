@@ -122,4 +122,83 @@ docker-compose up --build -d
   ]
   ```
 
+- `https://localhost:3000/api/updateQuote`  
+  Request:  
+  ```
+  {
+    body: {
+       _id: string
+       author: string
+       quote: string
+    },
+    method: PUT
+  }
+  ```
+  Response:  
+  ```
+  {
+      _id: string
+      author: string
+      quote: string
+      createdAt: string
+      updatedAt: string
+  }
+  ```
+
+- `https://localhost:3000/api/deleteQuote/:_id`  
+  Request:  
+  ```
+  {
+    method: DELETE
+  }
+  ```
+  Response:  
+  ```
+  { 
+    ok?: number
+     n?: number
+    deletedCount?: number
+  }
+  ```
 ---
+
+- `https://localhost:3000/api/searchQuoteByAuthor`  
+  Request:  
+  ```
+  {
+    author: string
+    method: POST
+  }
+  ```
+  Response:  
+  ```
+  [
+    {
+        _id: string
+        author: string
+        quote: string
+        createdAt: string
+        updatedAt: string
+    }
+  ]
+  ```
+---
+
+- `https://localhost:3000/api/getAuthorInfo`  
+  Request:  
+  ```
+  {
+    author: string
+    method: POST
+  }
+  ```
+  Response:  
+  ```
+  {
+    author: string
+    info: string
+  }
+  ```
+---
+
+
