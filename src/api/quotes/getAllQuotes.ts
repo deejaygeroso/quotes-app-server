@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { Quote } from '../mongoose/models'
+import { Quote } from '../../mongoose/models'
 
 const getAllQuotes = async (req: Request, res: Response): Promise<void> => {
   const quoteModel = new Quote()

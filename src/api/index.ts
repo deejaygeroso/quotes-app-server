@@ -1,18 +1,21 @@
 import * as express from 'express'
-import createQuote from './createQuote'
-import deleteQuote from './deleteQuote'
-import getAllQuotes from './getAllQuotes'
-import getAuthorInfo from './getAuthorInfo'
-import updateQuote from './updateQuote'
-import searchQuote from './searchQuote'
+
+import getAuthorInfo from './author/getAuthorInfo'
+
+import createQuote from './quotes/createQuote'
+import deleteQuote from './quotes/deleteQuote'
+import getAllQuotes from './quotes/getAllQuotes'
+import updateQuote from './quotes/updateQuote'
+import searchQuotes from './quotes/searchQuotes'
 
 const router = express.Router()
 
-router.post('/createQuote', createQuote)
-router.delete('/deleteQuote/:_id', deleteQuote)
-router.get('/getAllQuotes', getAllQuotes)
-router.post('/getAuthorInfo', getAuthorInfo)
-router.post('/searchQuote', searchQuote)
-router.put('/updateQuote', updateQuote)
+router.post('/author', getAuthorInfo)
+
+router.get('/quotes', getAllQuotes)
+router.post('/quotes', createQuote)
+router.put('/quotes', updateQuote)
+router.delete('/quotes/:_id', deleteQuote)
+router.post('/quotes/search', searchQuotes)
 
 export default router

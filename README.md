@@ -80,7 +80,7 @@ docker-compose up --build -d
 
 ## API Routes  
 
-- `https://localhost:3000/api/createQuote`  
+- `[Create Quote]: https://localhost:3000/api/quotes`  
   Request:  
   ```
   {
@@ -102,7 +102,7 @@ docker-compose up --build -d
   }
   ```
 
-- `https://localhost:3000/api/getAllQuotes`  
+- `[Get All Quotes]: https://localhost:3000/api/quotes`  
   Request:  
   ```
   {
@@ -122,7 +122,7 @@ docker-compose up --build -d
   ]
   ```
 
-- `https://localhost:3000/api/updateQuote`  
+- `[Update Quote]: https://localhost:3000/api/quotes`  
   Request:  
   ```
   {
@@ -145,7 +145,7 @@ docker-compose up --build -d
   }
   ```
 
-- `https://localhost:3000/api/deleteQuote/:_id`  
+- `[Delete Quote]: https://localhost:3000/api/quotes/:_id`  
   Request:  
   ```
   {
@@ -161,7 +161,7 @@ docker-compose up --build -d
   }
   ```
 
-- `https://localhost:3000/api/searchQuote`  
+- `[Search Quotes]: https://localhost:3000/api/quotes/search`  
   Request:  
   ```
   {
@@ -184,7 +184,7 @@ docker-compose up --build -d
   ]
   ```
 
-- `https://localhost:3000/api/getAuthorInfo`  
+- `[Get Author Info]: https://localhost:3000/api/author`  
   Request:  
   ```
   {

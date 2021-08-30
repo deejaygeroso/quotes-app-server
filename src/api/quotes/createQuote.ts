@@ -1,5 +1,5 @@
-import { Quote } from '../mongoose/models'
 import { Request, Response } from 'express'
+import { Quote } from '../../mongoose/models'
 
 const createQuote = async (req: Request, res: Response): Promise<void> => {
   const { author, quote } = req.body

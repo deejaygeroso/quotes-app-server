@@ -30,9 +30,9 @@ const quoteData = {
   quote: 'I am a problem solver',
 }
 
-test('POST /api/createQuote', async () => {
+test('POST [Create Quote]: /api/quotes', async () => {
   await supertest(app)
-    .post('/api/createQuote')
+    .post('/api/quotes')
     .send(quoteData)
     .set('Accept', 'application/json')
     .expect('Content-Type', /json/)
@@ -50,9 +50,9 @@ test('POST /api/createQuote', async () => {
     })
 })
 
-test('GET /api/getAllQuotes', async () => {
+test('GET [Get All Quotes]: /api/quotes', async () => {
   await supertest(app)
-    .get('/api/getAllQuotes')
+    .get('/api/quotes')
     .expect(200)
     .then(response => {
       // Check response body object
