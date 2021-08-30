@@ -11,7 +11,7 @@ class QuoteModel extends ActiveRecord<IQuote> {
     super(Quote)
   }
 
-  public searchQuote = async (searchInput: string): Promise<IQuote[]> => {
+  public searchQuotes = async (searchInput: string): Promise<IQuote[]> => {
     const regex = new RegExp(searchInput, 'i')
     return this.find({
       $or: [{ author: regex }, { quote: regex }],

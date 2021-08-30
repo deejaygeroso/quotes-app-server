@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { getAuthorsInformation } from '../lib'
+import { getAuthorsInformation } from '../../lib'
 
 const getAuthorInfo = async (req: Request, res: Response): Promise<void> => {
   const { author } = req.body
